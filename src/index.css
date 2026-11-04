@@ -1,0 +1,232 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff1f6, #fce4ec, #f8d5e3);
+    min-height: 100vh;
+}
+
+/* PAGE LAYOUT */
+
+.page-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px;
+    position: relative;
+}
+
+/* ASMA BRAND */
+
+.brand-logo {
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #c52d78;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.brand-logo span:first-child {
+    font-size: 28px;
+}
+
+/* MAIN QUIZ CARD */
+
+.App-countainer {
+    width: 100%;
+    max-width: 550px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(214, 51, 108, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b47b95;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* QUESTIONS */
+
+.question-progress {
+    display: inline-block;
+    background: #fff0f5;
+    color: #d63384;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.question {
+    color: #55404a;
+    font-size: 19px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* OPTIONS */
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f5d1df;
+    border-radius: 12px;
+    background: #fff8fb;
+    color: #a83267;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: #fce4ec;
+    border-color: #e879a5;
+}
+
+.option.selected {
+    background: #e879a5;
+    color: white;
+    border-color: #e879a5;
+}
+
+/* NAVIGATION */
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.nav-buttons button,
+.restart-button {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #d63384;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover,
+.restart-button:hover {
+    background: #ad2166;
+    transform: translateY(-2px);
+}
+
+.nav-buttons button:disabled {
+    background: #e8cbd7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* RESULT */
+
+.result-content {
+    padding: 15px 0;
+}
+
+.result-icon {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.score {
+    color: #d63384;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 25px 0 12px;
+}
+
+.result-message {
+    color: #987187;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.restart-button {
+    min-width: 160px;
+}
+
+/* DEVELOPER SIGNATURE */
+
+.developer-signature {
+    position: absolute;
+    bottom: 25px;
+    right: 35px;
+    color: #ad6685;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.developer-signature strong {
+    color: #c52d78;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .page-shell {
+        padding: 100px 15px;
+    }
+
+    .App-countainer {
+        padding: 28px 18px;
+    }
+
+    .brand-logo {
+        top: 20px;
+        left: 18px;
+        font-size: 17px;
+    }
+
+    .developer-signature {
+        right: 15px;
+        bottom: 15px;
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .question {
+        font-size: 17px;
+    }
+
+    .nav-buttons button {
+        padding: 12px 17px;
+    }
+}
